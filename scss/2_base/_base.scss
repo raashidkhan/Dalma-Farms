@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@400;700&display=swap');
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+
+}
+
+html {
+    font-size: 62.5%;
+}
+
+::selection {
+    // background-color: $theme-green;
+    // color: $white;
+}
+
+body {
+    box-sizing: border-box;
+    overflow-x: hidden;
+
+
+
+
+    &::-webkit-scrollbar {
+        // background-color: $light-grey;
+        width: 1rem;
+        border-radius: 0.5rem;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        // background-color: $black;
+        border-radius: 0.5rem;
+    }
+
+
+}
+
+
+
+a {
+    text-decoration: none;
+    color: currentColor;
+}
+
+ul {
+    list-style: none;
+}
+
+p,
+article {
+    word-break: break-word;
+    hyphens: auto;
+}
