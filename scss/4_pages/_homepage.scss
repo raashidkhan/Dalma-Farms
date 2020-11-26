@@ -1,0 +1,176 @@
+.hero {
+    width: 100vw;
+    height: 100vh;
+    padding: 5vw;
+    display: flex;
+    justify-content: space-between;
+
+
+    &-content {
+        width: 40%;
+        position: relative;
+        align-self: center;
+
+        &-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 90%;
+            margin-top: -5vw;
+        }
+    }
+
+    &-images {
+        width: 60%;
+        position: relative;
+        // display: flex;
+
+        &-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+
+
+
+            img {
+                width: 100%;
+                height: 100%;
+
+            }
+        }
+    }
+}
+
+//Text Slide Animation
+.hero-content-slide.toSlide-js {
+
+    overflow: hidden;
+    z-index: 5;
+
+
+    strong {
+        display: inline-block;
+        color: $grey-500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 1.4rem;
+        transform: translateY(100%);
+        opacity: 0;
+        transition: 600ms cubic-bezier(0.87, 0, 0.13, 1);
+        z-index: -10;
+        backface-visibility: hidden;
+
+    }
+
+    h1 {
+        font-size: $step03;
+        margin-bottom: 2.5rem;
+        overflow: hidden;
+        transform: translateX(100%);
+        transition: 900ms cubic-bezier(0.87, 0, 0.13, 1);
+        z-index: -10;
+        opacity: 0;
+        backface-visibility: hidden;
+        background-color: #fff;
+
+
+    }
+
+    p {
+        margin-bottom: 2.5rem;
+        overflow: hidden;
+        transform: translateY(100%);
+        opacity: 0;
+        transition: 600ms cubic-bezier(0.87, 0, 0.13, 1) 400ms;
+        z-index: -10;
+        backface-visibility: hidden;
+    }
+
+    a {
+        display: inline-block;
+        transform: translateY(100%);
+        opacity: 0;
+        transition: 600ms cubic-bezier(0.87, 0, 0.13, 1) 600ms;
+        z-index: -10;
+        backface-visibility: hidden;
+    }
+}
+
+.hero-content-slide.toSlide-js.active strong {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 10;
+}
+
+.hero-content-slide.toSlide-js.active h1 {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 10;
+}
+
+.hero-content-slide.toSlide-js.active p {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 10;
+}
+
+.hero-content-slide.toSlide-js.active a {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 10;
+}
+
+.hero-content-slide.toSlide-js.wasActive strong {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: none;
+}
+
+.hero-content-slide.toSlide-js.wasActive h1 {
+    transform: translateX(-100%);
+    opacity: 0;
+
+}
+
+.hero-content-slide.toSlide-js.wasActive p {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: none;
+}
+
+.hero-content-slide.toSlide-js.wasActive a {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: none;
+}
+
+
+//Image Slide Animation
+
+
+.hero-images {
+    overflow: hidden;
+}
+
+.hero-images-slide {
+
+    transform: translateX(100%) scale(1.7);
+    transition: 900ms cubic-bezier(0.87, 0, 0.13, 1) 300ms;
+    z-index: -10;
+    opacity: 0;
+    backface-visibility: hidden;
+}
+
+.hero-images-slide.activeImage {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    z-index: 10;
+}
+
+.hero-images-slide.wasActiveImage {
+    transform: translateX(-100%) scale(1);
+    opacity: 0;
+}
