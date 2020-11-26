@@ -1,0 +1,16 @@
+.navbar {
+    width: 100vw;
+    //height: 5vw;
+    padding: 0 5vw;
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 5vw;
+    align-items: center;
+
+    &-logo {
+        height: 100%;
+        width: 10rem;
+    }
+
+}
