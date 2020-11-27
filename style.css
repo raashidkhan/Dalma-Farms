@@ -75,16 +75,24 @@ h6 {
   display: block;
 }
 
-.margin-bottom-large {
-  margin-bottom: 5.12rem !important;
+.mb-8 {
+  margin-bottom: 0.8rem !important;
 }
 
-.margin-bottom-medium {
+.mb-16 {
+  margin-bottom: 1.6rem !important;
+}
+
+.mb-24 {
+  margin-bottom: 2.4rem !important;
+}
+
+.mb-32 {
   margin-bottom: 3.2rem !important;
 }
 
-.margin-bottom-small {
-  margin-bottom: 1.6rem !important;
+.mb-40 {
+  margin-bottom: 4rem !important;
 }
 
 .navbar {
@@ -325,13 +333,104 @@ h6 {
   text-align: right;
 }
 
+.productListing {
+  width: 100vw;
+  padding: 5vw;
+}
+
+.productListing-content {
+  margin-bottom: 5vw;
+}
+.productListing-content p {
+  color: #6B7280;
+  display: flex;
+  justify-content: space-between;
+}
+.productListing-content p span {
+  width: 60%;
+}
+
+.productListing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 30rem 30rem;
+  gap: 5vw;
+  grid-template-areas: "productOne productTwo productThree" "productOne productFour productFive";
+}
+
+.productOne {
+  grid-area: productOne;
+}
+
+.productTwo {
+  grid-area: productTwo;
+}
+
+.productThree {
+  grid-area: productThree;
+}
+
+.productFour {
+  grid-area: productFour;
+}
+
+.productFive {
+  grid-area: productFive;
+}
+
+.productListing-grid .product {
+  width: 100%;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 1px solid rgba(27, 171, 76, 0.15);
+  position: relative;
+}
+.productListing-grid .product img {
+  border-radius: 1rem;
+}
+.productListing-grid .product .productDetails {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: auto;
+  max-height: 100%;
+  border-radius: 1rem;
+  background-color: rgba(177, 243, 199, 0.4);
+  padding: 2rem;
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  backdrop-filter: saturate(180%) blur(10px);
+  transform: translateY(100%);
+  transition: 400ms cubic-bezier(0.87, 0, 0.13, 1);
+}
+.productListing-grid .product .productDetails h3 {
+  font-size: 2.1rem;
+}
+
+.productListing-grid .product:hover .productDetails {
+  transform: translateY(0);
+}
+
 .primaryCta {
   background-color: #1BAB4C;
   color: #fff;
   padding: 1.2rem 5rem;
   text-transform: uppercase;
+  display: inline-block;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+.secondaryCta {
+  background-color: transparent;
+  border: 2px solid #57D180;
+  color: #374151;
+  padding: 1.2rem 5rem;
+  text-transform: uppercase;
   display: block;
   border-radius: 1rem;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */
