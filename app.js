@@ -59,3 +59,33 @@ const hero = document.querySelector('.hero');
 if (hero) {
   heroSliderAnimation();
 }
+
+// const gallerySwiper = function () {
+document.addEventListener('DOMContentLoaded', () => {
+  const swipers = document.querySelectorAll('.swiper-js');
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+  swipers.forEach((swiper) => {
+    swiper.addEventListener('mousedown', (e) => {
+      isDown = true;
+
+      startX = e.pageX - swiper.offsetLeft;
+      scrollLeft = swiper.scrollLeft;
+    });
+    swiper.addEventListener('mouseleave', () => {
+      isDown = false;
+    });
+    swiper.addEventListener('mouseup', () => {
+      isDown = false;
+    });
+    swiper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - swiper.offsetLeft;
+      const walk = (x - startX) * 3; //scroll-fast
+      swiper.scrollLeft = scrollLeft - walk;
+    });
+  });
+});
+// };

@@ -1,0 +1,48 @@
+.footer {
+    width: 100vw;
+    padding: 5vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: $green-100;
+
+    &>* {
+        padding: 2.5rem;
+        background-color: $background;
+        border-radius: $bora10;
+    }
+
+    &-about {
+        width: 30%;
+
+
+        &-logo {
+            width: 20rem;
+        }
+    }
+
+    &-site {
+        width: 20%;
+        text-align: center;
+    }
+
+    &-category {
+        width: 20%;
+        text-align: center;
+    }
+
+    &-address {
+        width: 30%;
+        text-align: right;
+
+        a {
+            display: block;
+        }
+    }
+}
+
+.copyright {
+    background-color: $green-100;
+    text-align: center;
+    width: 100vw;
+}

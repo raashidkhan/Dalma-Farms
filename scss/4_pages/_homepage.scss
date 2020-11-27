@@ -290,10 +290,11 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 30rem 30rem;
-    gap: 5vw;
+    gap: 2.5vw;
     grid-template-areas:
         "productOne productTwo productThree"
         "productOne productFour productFive";
+    padding-bottom: 5vw;
 }
 
 .productOne {
@@ -359,4 +360,60 @@
 
 .productListing-grid .product:hover .productDetails {
     transform: translateY(0);
+}
+
+.homeContact {
+    padding: 5vw;
+    background-color: $green-300;
+
+
+    &>* {
+        width: 65%;
+        margin: 0 auto;
+    }
+
+    &-cta {
+
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+
+.homeGallery {
+    width: 100vw;
+
+
+    h2 {
+        padding: 5vw;
+        padding-bottom: 0;
+    }
+
+
+    &-swiper {
+
+        width: 100%;
+        position: relative;
+        display: grid;
+        grid-template-columns: 30rem;
+        grid-auto-flow: column;
+        grid-template-rows: 30rem;
+        grid-auto-columns: 30rem;
+        align-items: stretch;
+        gap: 0;
+        overflow: scroll hidden;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        &::-webkit-scrollbar {
+            background-color: transparent;
+            height: 1px;
+        }
+    }
 }

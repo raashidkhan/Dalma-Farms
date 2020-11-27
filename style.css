@@ -95,6 +95,10 @@ h6 {
   margin-bottom: 4rem !important;
 }
 
+.text-center {
+  text-align: center !important;
+}
+
 .navbar {
   width: 100vw;
   padding: 0 5vw;
@@ -107,6 +111,47 @@ h6 {
 .navbar-logo {
   height: 100%;
   width: 10rem;
+}
+
+.footer {
+  width: 100vw;
+  padding: 5vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #F2FEF6;
+}
+.footer > * {
+  padding: 2.5rem;
+  background-color: #fff;
+  border-radius: 1rem;
+}
+.footer-about {
+  width: 30%;
+}
+.footer-about-logo {
+  width: 20rem;
+}
+.footer-site {
+  width: 20%;
+  text-align: center;
+}
+.footer-category {
+  width: 20%;
+  text-align: center;
+}
+.footer-address {
+  width: 30%;
+  text-align: right;
+}
+.footer-address a {
+  display: block;
+}
+
+.copyright {
+  background-color: #F2FEF6;
+  text-align: center;
+  width: 100vw;
 }
 
 .hero {
@@ -354,8 +399,9 @@ h6 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 30rem 30rem;
-  gap: 5vw;
+  gap: 2.5vw;
   grid-template-areas: "productOne productTwo productThree" "productOne productFour productFive";
+  padding-bottom: 5vw;
 }
 
 .productOne {
@@ -412,6 +458,50 @@ h6 {
   transform: translateY(0);
 }
 
+.homeContact {
+  padding: 5vw;
+  background-color: #B1F3C7;
+}
+.homeContact > * {
+  width: 65%;
+  margin: 0 auto;
+}
+.homeContact-cta {
+  display: flex;
+  justify-content: space-around;
+}
+
+.homeGallery {
+  width: 100vw;
+}
+.homeGallery h2 {
+  padding: 5vw;
+  padding-bottom: 0;
+}
+.homeGallery-swiper {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: 30rem;
+  grid-auto-flow: column;
+  grid-template-rows: 30rem;
+  grid-auto-columns: 30rem;
+  align-items: stretch;
+  gap: 0;
+  overflow: scroll hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+.homeGallery-swiper img {
+  width: 100%;
+  object-fit: cover;
+}
+.homeGallery-swiper::-webkit-scrollbar {
+  background-color: transparent;
+  height: 1px;
+}
+
 .primaryCta {
   background-color: #1BAB4C;
   color: #fff;
@@ -428,7 +518,7 @@ h6 {
   color: #374151;
   padding: 1.2rem 5rem;
   text-transform: uppercase;
-  display: block;
+  display: inline-block;
   border-radius: 1rem;
   text-align: center;
 }
