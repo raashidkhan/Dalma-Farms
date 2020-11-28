@@ -724,6 +724,129 @@ h6 {
   height: 1px;
 }
 
+.aboutUs-header {
+  width: 100vw;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://images.pexels.com/photos/4117545/pexels-photo-4117545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+  background-size: cover;
+  background-position: 50%;
+}
+@media (max-width: 900px) {
+  .aboutUs-header {
+    height: 60vh;
+  }
+}
+
+.aboutUs-grid-container {
+  padding: 10vw 5vw;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 5vw;
+  grid-template-areas: "aboutUs mission" "aboutUs vision";
+}
+@media (max-width: 900px) {
+  .aboutUs-grid-container {
+    display: block;
+  }
+}
+.aboutUs-grid-container .aboutUs {
+  grid-area: aboutUs;
+}
+@media (max-width: 900px) {
+  .aboutUs-grid-container .aboutUs {
+    margin-bottom: 10vw;
+  }
+}
+.aboutUs-grid-container .aboutUs p {
+  margin-bottom: 1.6rem;
+}
+.aboutUs-grid-container .mission {
+  grid-area: mission;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .aboutUs-grid-container .mission {
+    margin-bottom: 15vw;
+  }
+}
+.aboutUs-grid-container .mission img {
+  height: 30rem;
+  border-radius: 1rem;
+}
+.aboutUs-grid-container .mission p {
+  color: #111827;
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  padding: 2.5rem;
+  bottom: -2.5rem;
+  border-radius: 1rem;
+  transform: translateX(-50%);
+  background-color: rgba(242, 254, 246, 0.6);
+  -webkit-backdrop-filter: saturate(180%) blur(15px);
+  backdrop-filter: saturate(180%) blur(15px);
+  border: 0.5px solid rgba(242, 254, 246, 0.8);
+  box-shadow: 0 2px 2px 0 rgba(150, 150, 150, 0.08), 0 2px 5px 2px rgba(150, 150, 150, 0.16);
+}
+@media (max-width: 900px) {
+  .aboutUs-grid-container .mission p {
+    width: 90%;
+  }
+}
+.aboutUs-grid-container .mission p strong {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  margin-bottom: 1.6rem;
+  color: #1BAB4C;
+}
+.aboutUs-grid-container .vision {
+  grid-area: vision;
+  position: relative;
+}
+@media (max-width: 900px) {
+  .aboutUs-grid-container .vision {
+    margin-bottom: 15vw;
+  }
+}
+.aboutUs-grid-container .vision img {
+  height: 30rem;
+  border-radius: 1rem;
+}
+.aboutUs-grid-container .vision p {
+  color: #111827;
+  position: absolute;
+  left: 50%;
+  width: 60%;
+  padding: 2.5rem;
+  bottom: -2.5rem;
+  border-radius: 1rem;
+  transform: translateX(-50%);
+  background-color: rgba(242, 254, 246, 0.6);
+  -webkit-backdrop-filter: saturate(180%) blur(15px);
+  backdrop-filter: saturate(180%) blur(15px);
+  border: 0.5px solid rgba(242, 254, 246, 0.8);
+  box-shadow: 0 2px 2px 0 rgba(150, 150, 150, 0.08), 0 2px 5px 2px rgba(150, 150, 150, 0.16);
+}
+@media (max-width: 900px) {
+  .aboutUs-grid-container .vision p {
+    width: 90%;
+  }
+}
+.aboutUs-grid-container .vision p strong {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2.1rem;
+  margin-bottom: 1.6rem;
+  color: #1BAB4C;
+}
+
 .contactPageWrapper {
   padding: 5vw;
   display: flex;

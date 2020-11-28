@@ -1,0 +1,136 @@
+.aboutUs-header {
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.pexels.com/photos/4117545/pexels-photo-4117545.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
+    background-size: cover;
+    background-position: 50%;
+
+    @include breakpoint(tab) {
+        height: 60vh;
+    }
+
+
+}
+
+
+
+.aboutUs-grid-container {
+    padding: 10vw 5vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 5vw;
+    grid-template-areas:
+        "aboutUs mission"
+        "aboutUs vision";
+
+    @include breakpoint(tab) {
+        display: block;
+    }
+
+    .aboutUs {
+        grid-area: aboutUs;
+
+        //align-self: center;
+        @include breakpoint(tab) {
+            margin-bottom: 10vw;
+        }
+
+        p {
+            margin-bottom: 1.6rem;
+        }
+    }
+
+    .mission {
+        grid-area: mission;
+        position: relative;
+
+        @include breakpoint(tab) {
+            margin-bottom: 15vw;
+        }
+
+        img {
+            height: 30rem;
+            border-radius: $bora10;
+        }
+
+        p {
+            color: $grey-900;
+            position: absolute;
+            left: 50%;
+            width: 60%;
+            padding: 2.5rem;
+            bottom: -2.5rem;
+            border-radius: $bora10;
+            transform: translateX(-50%);
+            background-color: rgba($green-100, 0.6);
+            -webkit-backdrop-filter: saturate(180%) blur(15px);
+            backdrop-filter: saturate(180%) blur(15px);
+            border: 0.5px solid rgba($green-100, 0.8);
+            box-shadow: 0 2px 2px 0 rgba(150, 150, 150, 0.08),
+                0 2px 5px 2px rgba(150, 150, 150, 0.16);
+
+            @include breakpoint(tab) {
+                width: 90%;
+            }
+
+            strong {
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: $step01;
+                margin-bottom: 1.6rem;
+                color: $green-700;
+            }
+
+        }
+    }
+
+    .vision {
+        grid-area: vision;
+        position: relative;
+
+        @include breakpoint(tab) {
+            margin-bottom: 15vw;
+        }
+
+        img {
+            height: 30rem;
+            border-radius: $bora10;
+        }
+
+        p {
+            color: $grey-900;
+            position: absolute;
+            left: 50%;
+            width: 60%;
+            padding: 2.5rem;
+            bottom: -2.5rem;
+            border-radius: $bora10;
+            transform: translateX(-50%);
+            background-color: rgba($green-100, 0.6);
+            -webkit-backdrop-filter: saturate(180%) blur(15px);
+            backdrop-filter: saturate(180%) blur(15px);
+            border: 0.5px solid rgba($green-100, 0.8);
+            box-shadow: 0 2px 2px 0 rgba(150, 150, 150, 0.08),
+                0 2px 5px 2px rgba(150, 150, 150, 0.16);
+
+            @include breakpoint(tab) {
+                width: 90%;
+            }
+
+            strong {
+                display: block;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: $step01;
+                margin-bottom: 1.6rem;
+                color: $green-700;
+            }
+
+        }
+    }
+}
