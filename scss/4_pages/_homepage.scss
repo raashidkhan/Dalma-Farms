@@ -1,11 +1,17 @@
 .hero {
     width: 100vw;
-    height: 100vh;
     padding: 5vw;
+    height: 100vh;
     padding-left: 5vw;
     display: flex;
     justify-content: space-between;
     position: relative;
+    flex-wrap: wrap;
+
+    @include breakpoint(tab) {
+        height: auto;
+    }
+
 
     &-logo {
         position: absolute;
@@ -18,23 +24,39 @@
 
     &-content {
         width: 40%;
-        position: relative;
 
 
-        &-slide {
-            position: absolute;
-            top: 50%;
-            left: 0;
-            transform: translateY(-50%);
-            width: 90%;
-            //margin-top: -5vw;
+        @include breakpoint(tab) {
+            width: 100%;
         }
 
-        .hero-cta {
-            position: absolute;
-            left: 0;
-            bottom: 5vw;
+        &-slideWrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+
+            @include breakpoint(tab) {
+                height: 45rem;
+            }
+
+
+
+            &_slide {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                width: 90%;
+
+                @include breakpoint(tab) {
+                    width: 100%;
+                }
+            }
+
         }
+
+        .hero-cta {}
 
 
     }
@@ -43,7 +65,13 @@
     &-images {
         width: 60%;
         position: relative;
+
+
         // display: flex;
+        @include breakpoint(tab) {
+            width: 100%;
+            height: 50vh;
+        }
 
         &-slide {
             position: absolute;
@@ -57,10 +85,13 @@
 
 
 
+
+
             img {
                 width: 100%;
                 height: 100%;
                 border-radius: $bora10;
+
 
             }
         }
@@ -68,7 +99,7 @@
 }
 
 //Text Slide Animation
-.hero-content-slide.toSlide-js {
+.hero-content-slideWrapper_slide.toSlide-js {
 
     overflow: hidden;
     z-index: 5;
@@ -99,6 +130,9 @@
         backface-visibility: hidden;
         background-color: #fff;
 
+        @include breakpoint(small-phone) {
+            font-size: $step03;
+        }
 
     }
 
@@ -123,49 +157,49 @@
     }
 }
 
-.hero-content-slide.toSlide-js.active strong {
+.hero-content-slideWrapper_slide.toSlide-js.active strong {
     transform: translateY(0);
     opacity: 1;
     z-index: 10;
 }
 
-.hero-content-slide.toSlide-js.active h1 {
+.hero-content-slideWrapper_slide.toSlide-js.active h1 {
     transform: translateX(0);
     opacity: 1;
     z-index: 10;
 }
 
-.hero-content-slide.toSlide-js.active p {
+.hero-content-slideWrapper_slide.toSlide-js.active p {
     transform: translateY(0);
     opacity: 1;
     z-index: 10;
 }
 
-.hero-content-slide.toSlide-js.active a {
+.hero-content-slideWrapper_slide.toSlide-js.active a {
     transform: translateY(0);
     opacity: 1;
     z-index: 10;
 }
 
-.hero-content-slide.toSlide-js.wasActive strong {
+.hero-content-slideWrapper_slide.toSlide-js.wasActive strong {
     transform: translateY(-100%);
     opacity: 0;
     transition: none;
 }
 
-.hero-content-slide.toSlide-js.wasActive h1 {
+.hero-content-slideWrapper_slide.toSlide-js.wasActive h1 {
     transform: translateX(-100%);
     opacity: 0;
 
 }
 
-.hero-content-slide.toSlide-js.wasActive p {
+.hero-content-slideWrapper_slide.toSlide-js.wasActive p {
     transform: translateY(-100%);
     opacity: 0;
     transition: none;
 }
 
-.hero-content-slide.toSlide-js.wasActive a {
+.hero-content-slideWrapper_slide.toSlide-js.wasActive a {
     transform: translateY(-100%);
     opacity: 0;
     transition: none;
@@ -199,21 +233,43 @@
     opacity: 0;
 }
 
+
+// =============================
+// About Section
+// =============================
+
 .home-about {
     padding: 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
+    @include breakpoint(tab) {
+        flex-direction: column;
+    }
+
     h3 {
         width: 20%;
+
+        @include breakpoint(tab) {
+            width: 100%;
+
+        }
     }
 
     p {
         width: 60%;
+
+        @include breakpoint(tab) {
+            width: 100%;
+
+        }
     }
 }
 
+// =============================
+// Why Us Section
+// =============================
 .whyUs {
     width: 100vw;
     padding: 5vw;
@@ -229,10 +285,18 @@
         border-top-right-radius: $bora10;
         border-left: 0.5rem solid $green-700;
 
+        @include breakpoint(tab) {
+            text-align: left;
+        }
+
         p {
             width: 50%;
             margin: 0 auto;
             margin-top: 2.5rem;
+
+            @include breakpoint(tab) {
+                width: 100%;
+            }
         }
     }
 
@@ -247,8 +311,16 @@
         border-bottom-right-radius: $bora10;
         border-left: 0.5rem solid $green-700;
 
+        @include breakpoint(tab) {
+            flex-direction: column;
+        }
+
         &-col {
             width: 30%;
+
+            @include breakpoint(tab) {
+                width: 100%;
+            }
 
             p {
                 margin-bottom: 5vw;
@@ -263,8 +335,15 @@
 
 .col-right {
     text-align: right;
+
+    @include breakpoint(tab) {
+        text-align: left;
+    }
 }
 
+// =============================
+// Product Listing Section
+// =============================
 
 .productListing {
     width: 100vw;
@@ -280,8 +359,19 @@
         display: flex;
         justify-content: space-between;
 
+        @include breakpoint(tab) {
+            flex-direction: column;
+            align-items: flex-start;
+
+        }
+
         span {
             width: 60%;
+
+            @include breakpoint(tab) {
+                width: 100%;
+                margin-bottom: 5vw;
+            }
         }
     }
 }
@@ -295,6 +385,10 @@
         "productOne productTwo productThree"
         "productOne productFour productFive";
     padding-bottom: 5vw;
+
+    @include breakpoint(tab) {
+        display: block;
+    }
 }
 
 .productOne {
@@ -325,8 +419,11 @@
     overflow: hidden;
     border: 1px solid rgba($green-700, 0.15);
     position: relative;
-    //background-color: $green-100;
 
+    //background-color: $green-100;
+    @include breakpoint(tab) {
+        margin-bottom: 5vw;
+    }
 
     img {
         border-radius: $bora10;
@@ -341,7 +438,6 @@
         height: auto;
         max-height: 100%;
         border-radius: $bora10;
-
         background-color: rgba($green-300, 0.4);
         padding: 2rem;
         -webkit-backdrop-filter: saturate(180%) blur(10px);
@@ -362,6 +458,10 @@
     transform: translateY(0);
 }
 
+// =============================
+// Contact Section
+// =============================
+
 .homeContact {
     padding: 5vw;
     background-color: $green-300;
@@ -370,15 +470,33 @@
     &>* {
         width: 65%;
         margin: 0 auto;
+        text-align: center;
+
+        @include breakpoint(tab) {
+            width: 100%;
+            text-align: left;
+        }
     }
 
     &-cta {
-
         display: flex;
         justify-content: space-around;
+
+        @include breakpoint(tab) {
+            flex-direction: column;
+
+            a {
+                margin-bottom: 5vw;
+            }
+
+
+        }
     }
 }
 
+// =============================
+// Gallery Section
+// =============================
 
 .homeGallery {
     width: 100vw;

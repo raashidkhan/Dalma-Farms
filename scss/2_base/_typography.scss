@@ -16,4 +16,8 @@ h6 {
 
 .section-heading {
     font-size: $step03;
+
+    @include breakpoint(phone) {
+        font-size: $step02;
+    }
 }

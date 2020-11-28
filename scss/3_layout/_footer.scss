@@ -6,34 +6,59 @@
     align-items: flex-start;
     background-color: $green-100;
 
+    @include breakpoint(tab) {
+        flex-direction: column;
+    }
+
     &>* {
         padding: 2.5rem;
-        background-color: $background;
+        //background-color: $background;
         border-radius: $bora10;
     }
 
     &-about {
         width: 30%;
 
+        @include breakpoint(tab) {
+            width: 100%;
+            text-align: center;
+        }
 
         &-logo {
             width: 20rem;
+
+            @include breakpoint(tab) {
+                margin: 0 auto;
+            }
         }
     }
 
     &-site {
         width: 20%;
         text-align: center;
+
+        @include breakpoint(tab) {
+            width: 100%;
+        }
     }
 
     &-category {
         width: 20%;
         text-align: center;
+
+        @include breakpoint(tab) {
+            width: 100%;
+        }
     }
 
     &-address {
         width: 30%;
         text-align: right;
+
+        @include breakpoint(tab) {
+            width: 100%;
+            text-align: center;
+        }
 
         a {
             display: block;

@@ -33,7 +33,7 @@
     }
 
     @else if $point==small-phone {
-        @media (max-width: 414px) {
+        @media (max-width: 365px) {
             @content;
         }
     }

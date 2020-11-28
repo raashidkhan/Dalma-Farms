@@ -7,6 +7,8 @@
     margin: 0;
     padding: 0;
 
+
+
 }
 
 html {
@@ -34,13 +36,13 @@ body {
 
 
     &::-webkit-scrollbar {
-        // background-color: $light-grey;
+        background-color: $background;
         width: 1rem;
         border-radius: 0.5rem;
     }
 
     &::-webkit-scrollbar-thumb {
-        // background-color: $black;
+        background-color: $green-700;
         border-radius: 0.5rem;
     }
 

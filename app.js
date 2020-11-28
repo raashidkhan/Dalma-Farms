@@ -1,3 +1,10 @@
+const navBtn = document.querySelector('.menuBtn');
+const menuContainer = document.querySelector('.navbar-menuContainer');
+navBtn.addEventListener('click', () => {
+  navBtn.classList.toggle('active');
+  menuContainer.classList.toggle('active');
+});
+
 const heroSliderAnimation = () => {
   // ==========================
   // Image Slider Function
