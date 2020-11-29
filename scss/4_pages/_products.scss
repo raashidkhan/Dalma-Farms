@@ -1,10 +1,11 @@
 .productPage-header {
+    width: 100vw;
+
+    margin-bottom: 5rem;
 
     &--content {
-
-
         img {
-            height: 65vh;
+            height: 70vh;
         }
 
         h2 {
@@ -18,7 +19,7 @@
             left: 50%;
             transform: translateX(-50%);
             border-radius: $bora10;
-            background-color: rgba($green-300, 0.6);
+            background-color: rgba($green-100, 0.6);
             -webkit-backdrop-filter: saturate(180%) blur(15px);
             backdrop-filter: saturate(180%) blur(15px);
             border: 0.5px solid rgba($green-100, 0.8);
@@ -34,14 +35,25 @@
     padding: 5vw;
     width: 100vw;
 
+    @include breakpoint(tab) {
+        padding: 0;
+    }
+
     .productList-buttons {
         width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr;
         gap: 0;
-        margin-bottom: 2.5vw;
+        overflow-x: auto;
+        border: 1px solid rgba($grey-300, 0.5);
+        border-bottom: none;
+        border-top-left-radius: $bora10;
+        border-top-right-radius: $bora10;
 
+        @include breakpoint(tab) {
+            display: none;
+        }
 
         button {
             cursor: pointer;
@@ -50,12 +62,13 @@
             background-color: transparent;
             font-size: 1.8rem;
             text-transform: uppercase;
-            padding: 1rem 2rem;
+            padding: 2rem;
             color: $grey-500;
             border-top-right-radius: $bora10;
             border-top-left-radius: $bora10;
             outline: none;
             //border-bottom: 3px solid transparent;
+
         }
 
         button.active {
@@ -69,21 +82,49 @@
 
     .productList-category {
         position: relative;
+        border: 1px solid rgba($grey-300, 0.5);
+        // border-top: none;
+        border-bottom-left-radius: $bora10;
+        border-bottom-right-radius: $bora10;
 
     }
 }
 
-.productList-category--items {
+.productList-category--items .productHeading {
     display: none;
 
+    @include breakpoint(tab) {
+        display: block;
+        text-align: center;
+        font-size: $step03;
+    }
+
+}
+
+.productCard-container {
+    display: none;
+
+    @include breakpoint(tab) {
+        display: grid;
+        grid-template-columns: 90%;
+        grid-template-rows: 1fr;
+        gap: 5vw;
+        grid-auto-columns: 90%;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        position: relative;
+        padding: 10vw 0;
+    }
 
 
     .productCard {
         padding: 2.4rem;
-        background-color: $green-100;
+        background-color: $background;
         border-radius: $bora10;
         box-shadow: 0 2px 2px 0 rgba(150, 150, 150, 0.08),
             0 2px 5px 2px rgba(150, 150, 150, 0.16);
+
+
 
         &-image {
             height: 30rem;
@@ -105,10 +146,26 @@
     }
 }
 
-.productList-category--items.active {
+.productCard-container.active {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr;
     gap: 5vw;
+    padding: 5vw;
+    background-color: $green-100;
+
+
+    @include breakpoint(tab) {
+        grid-template-columns: 90%;
+        grid-template-rows: 1fr;
+        grid-auto-columns: 90%;
+        grid-auto-flow: column;
+        overflow-x: scroll;
+        position: relative;
+        background-color: $background;
+        padding: 10vw 0;
+
+
+    }
 
 }

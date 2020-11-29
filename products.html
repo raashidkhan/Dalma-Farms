@@ -9,20 +9,32 @@
 </head>
 
 <body>
+
     <nav class="navbar">
-        <div class="navbar-logo">
+        <a href="/index.html" class="navbar-logo">
             <img src="/images/logo.jpeg" class="scale-image" alt="">
-        </div>
-        <ul class="navbar-menuContainer">
-            <li><a>Home</a></li>
-            <li><a>Products</a></li>
-            <li><a>About</a></li>
-            <li><a>Contact</a></li>
+        </a>
+        <ul class="navbar-mobile navbar-mobile-js">
+
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/products.html">Products</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+
         </ul>
+        <ul class="navbar-desktop">
+            <li><a href="/products.html">Products</a></li>
+            <li><a href="/about.html">About</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+            <li><a class="primaryCta buyBtn">Buy on Amazon</a></li>
+        </ul>
+
         <div class="navbar-menuIcon">
             <button class="menuBtn"><span></span><span></span><span></span></button>
         </div>
     </nav>
+
+
 
     <header>
         <div class="productPage-header">
@@ -43,320 +55,121 @@
                 <button>Spices</button>
 
             </div>
+
+
             <div class="productList-category">
-                <div class="productList-category--items active">
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
+
+                <div class="productList-category--items" data-category="Spices">
+                    <h2 class="productHeading">
+                        Spices
+                    </h2>
+                    <div class="productCard-container active">
+                        <div class="productCard">
+                            <div class="productCard-image mb-24">
+                                <img src="/images/product1.jpg" alt="" class="scale-image">
+                            </div>
+                            <div class="productCard-details">
+                                <h2 class="mb-24">Cinnamon</h2>
+                                <a href="" class="primaryCta mb-16">Buy Now</a>
+                                <a href="/singleproduct.html" class="secondaryCta">View Product</a>
+                            </div>
                         </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Cinnamon</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Cinnamon</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Cinnamon</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Cinnamon</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
+                        <div class="productCard">
+                            <div class="productCard-image mb-24">
+                                <img src="/images/product1.jpg" alt="" class="scale-image">
+                            </div>
+                            <div class="productCard-details">
+                                <h2 class="mb-24">Cinnamon</h2>
+                                <a href="" class="primaryCta mb-16">Buy Now</a>
+                                <a href="" class="secondaryCta">View Product</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
+                </div>
+                <div class="productList-category--items" data-category="Spices">
+                    <h2 class="productHeading">
+                        Fruits
+                    </h2>
+                    <div class="productCard-container">
+                        <div class="productCard">
+                            <div class="productCard-image mb-24">
+                                <img src="/images/product1.jpg" alt="" class="scale-image">
+                            </div>
+                            <div class="productCard-details">
+                                <h2 class="mb-24">Apple</h2>
+                                <a href="" class="primaryCta mb-16">Buy Now</a>
+                                <a href="" class="secondaryCta">View Product</a>
+                            </div>
                         </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Cinnamon</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Cinnamon</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Cinnamon</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
+                        <div class="productCard">
+                            <div class="productCard-image mb-24">
+                                <img src="/images/product1.jpg" alt="" class="scale-image">
+                            </div>
+                            <div class="productCard-details">
+                                <h2 class="mb-24">Banana</h2>
+                                <a href="" class="primaryCta mb-16">Buy Now</a>
+                                <a href="" class="secondaryCta">View Product</a>
+                            </div>
                         </div>
                     </div>
 
+                </div>
+                <div class="productList-category--items" data-category="Spices">
+                    <h2 class="productHeading">
+                        Vegetables
+                    </h2>
+                    <div class="productCard-container">
+                        <div class="productCard">
+                            <div class="productCard-image mb-24">
+                                <img src="/images/product1.jpg" alt="" class="scale-image">
+                            </div>
+                            <div class="productCard-details">
+                                <h2 class="mb-24">Tomato</h2>
+                                <a href="" class="primaryCta mb-16">Buy Now</a>
+                                <a href="" class="secondaryCta">View Product</a>
+                            </div>
+                        </div>
+                        <div class="productCard">
+                            <div class="productCard-image mb-24">
+                                <img src="/images/product1.jpg" alt="" class="scale-image">
+                            </div>
+                            <div class="productCard-details">
+                                <h2 class="mb-24">Eggplant</h2>
+                                <a href="" class="primaryCta mb-16">Buy Now</a>
+                                <a href="" class="secondaryCta">View Product</a>
+                            </div>
+                        </div>
+                    </div>
 
                 </div>
-                <div class="productList-category--items">
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
+                <div class="productList-category--items" data-category="Spices">
+                    <h2 class="productHeading">
+                        Food
+                    </h2>
+                    <div class="productCard-container">
+                        <div class="productCard">
+                            <div class="productCard-image mb-24">
+                                <img src="/images/product1.jpg" alt="" class="scale-image">
+                            </div>
+                            <div class="productCard-details">
+                                <h2 class="mb-24">Jam</h2>
+                                <a href="" class="primaryCta mb-16">Buy Now</a>
+                                <a href="" class="secondaryCta">View Product</a>
+                            </div>
                         </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Apples</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Apples</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Apples</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
+                        <div class="productCard">
+                            <div class="productCard-image mb-24">
+                                <img src="/images/product1.jpg" alt="" class="scale-image">
+                            </div>
+                            <div class="productCard-details">
+                                <h2 class="mb-24">Bread</h2>
+                                <a href="" class="primaryCta mb-16">Buy Now</a>
+                                <a href="" class="secondaryCta">View Product</a>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Apples</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Apples</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Apples</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Apples</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="productList-category--items">
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Tomato</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Tomato</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Tomato</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Tomato</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Tomato</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Tomato</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Tomato</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Tomato</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="productList-category--items">
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Pepper</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Pepper</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Pepper</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Pepper</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Pepper</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Pepper</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Pepper</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
-                    <div class="productCard">
-                        <div class="productCard-image mb-24" data-category="food">
-                            <img src="/images/product1.jpg" alt="" class="scale-image">
-                        </div>
-                        <div class="productCard-details">
-                            <h2 class="mb-24">Pepper</h2>
-                            <a href="" class="primaryCta mb-16">Buy Now</a>
-                            <a href="" class="secondaryCta">View Product</a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

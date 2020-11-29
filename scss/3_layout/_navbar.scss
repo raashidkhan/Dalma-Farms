@@ -8,18 +8,24 @@
     padding-right: 5vw;
     align-items: center;
     z-index: 100;
-    background-color: rgba($green-100, 0.8);
+    background-color: rgba($green-100, 0.7);
     box-shadow: 0 1px 1px 0 rgba(66, 66, 66, 0.08),
         0 1px 3px 1px rgba(66, 66, 66, 0.16);
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid #fff;
 
+    @include breakpoint(tab) {
+        backdrop-filter: none;
+    }
 
     &-logo {
         height: 5vw;
         width: 10rem;
     }
 
-    &-menuContainer {
+
+
+    &-mobile {
         position: absolute;
         width: 60vw;
         height: 100vh;
@@ -32,7 +38,7 @@
         align-items: center;
         flex-direction: column;
         z-index: 100;
-        background-color: rgba($green-100, 0.6);
+        background-color: rgba($green-100, 0.7);
         -webkit-backdrop-filter: saturate(180%) blur(20px);
         backdrop-filter: saturate(180%) blur(20px);
         border: 0.5px solid rgba($green-100, 0.8);
@@ -51,7 +57,35 @@
 
     }
 
+    &-desktop {
+        display: flex;
+        align-items: center;
+        width: 50%;
+        justify-content: space-between;
+
+        @include breakpoint(tab) {
+            display: none;
+        }
+
+        li a:not(.buyBtn) {
+            &:hover {
+                color: $green-700;
+            }
+        }
+
+        li a.buyBtn {
+            padding: 0.75rem 2.5rem;
+
+        }
+    }
+
     &-menuIcon {
+        display: none;
+
+        @include breakpoint(tab) {
+            display: block;
+        }
+
         button {
 
             cursor: pointer;
@@ -91,7 +125,7 @@
 
 }
 
-.navbar-menuContainer.active {
+.navbar-mobile.active {
     transform: translateX(0);
 }
 

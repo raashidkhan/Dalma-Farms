@@ -1,5 +1,5 @@
 const navBtn = document.querySelector('.menuBtn');
-const menuContainer = document.querySelector('.navbar-menuContainer');
+const menuContainer = document.querySelector('.navbar-mobile-js');
 navBtn.addEventListener('click', () => {
   navBtn.classList.toggle('active');
   menuContainer.classList.toggle('active');
@@ -102,7 +102,7 @@ const productCategorySwitcher = () => {
     document.querySelectorAll('.productList-buttons button')
   );
   const categoryListItems = Array.from(
-    document.querySelectorAll('.productList-category--items')
+    document.querySelectorAll('.productCard-container')
   );
 
   categoryBtns.forEach((btn, index) => {
