@@ -96,3 +96,37 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 // };
+
+const productCategorySwitcher = () => {
+  const categoryBtns = Array.from(
+    document.querySelectorAll('.productList-buttons button')
+  );
+  const categoryListItems = Array.from(
+    document.querySelectorAll('.productList-category--items')
+  );
+
+  categoryBtns.forEach((btn, index) => {
+    btn.addEventListener('click', (e) => {
+      const activeCategory = categoryListItems.filter((item) => {
+        return item.classList.contains('active');
+      });
+      const activeButton = categoryBtns.filter((item) => {
+        return item.classList.contains('active');
+      });
+      activeCategory.forEach((item) => {
+        item.classList.remove('active');
+      });
+      activeButton.forEach((item) => {
+        item.classList.remove('active');
+      });
+
+      categoryListItems[index].classList.add('active');
+      categoryBtns[index].classList.add('active');
+    });
+  });
+};
+
+const isProductPage = document.querySelector('.productList-wrapper');
+if (isProductPage) {
+  productCategorySwitcher();
+}

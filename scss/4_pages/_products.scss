@@ -1,0 +1,114 @@
+.productPage-header {
+
+    &--content {
+
+
+        img {
+            height: 65vh;
+        }
+
+        h2 {
+            display: inline-block;
+            position: relative;
+            z-index: 10;
+            font-size: $step04;
+            text-align: center;
+            padding: 5vw;
+            margin-top: -7.5vw;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: $bora10;
+            background-color: rgba($green-300, 0.6);
+            -webkit-backdrop-filter: saturate(180%) blur(15px);
+            backdrop-filter: saturate(180%) blur(15px);
+            border: 0.5px solid rgba($green-100, 0.8);
+            box-shadow: 0 2px 2px 0 rgba(150, 150, 150, 0.08),
+                0 2px 5px 2px rgba(150, 150, 150, 0.16);
+        }
+    }
+}
+
+
+
+.productList-wrapper {
+    padding: 5vw;
+    width: 100vw;
+
+    .productList-buttons {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0;
+        margin-bottom: 2.5vw;
+
+
+        button {
+            cursor: pointer;
+            width: 100%;
+            border: none;
+            background-color: transparent;
+            font-size: 1.8rem;
+            text-transform: uppercase;
+            padding: 1rem 2rem;
+            color: $grey-500;
+            border-top-right-radius: $bora10;
+            border-top-left-radius: $bora10;
+            outline: none;
+            //border-bottom: 3px solid transparent;
+        }
+
+        button.active {
+            background-color: $green-100;
+            border-bottom: 3px solid $green-700;
+
+
+        }
+
+    }
+
+    .productList-category {
+        position: relative;
+
+    }
+}
+
+.productList-category--items {
+    display: none;
+
+
+
+    .productCard {
+        padding: 2.4rem;
+        background-color: $green-100;
+        border-radius: $bora10;
+        box-shadow: 0 2px 2px 0 rgba(150, 150, 150, 0.08),
+            0 2px 5px 2px rgba(150, 150, 150, 0.16);
+
+        &-image {
+            height: 30rem;
+
+            border-radius: $bora10;
+            overflow: hidden;
+        }
+
+        &-details {
+            h2 {
+                text-align: center;
+            }
+
+            a {
+                width: 100%;
+
+            }
+        }
+    }
+}
+
+.productList-category--items.active {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 5vw;
+
+}
